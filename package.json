@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"node server/server.js\" \"vite\"",
+    "dev": "concurrently \"node server/server.js\" \"node ./node_modules/vite/bin/vite.js\"",
     "server": "node server/server.js",
-    "build": "vite build",
+    "build": "node ./node_modules/vite/bin/vite.js build",
     "start": "node server/server.js",
-    "preview": "vite preview"
+    "preview": "node ./node_modules/vite/bin/vite.js preview"
   },
   "dependencies": {
     "concurrently": "^9.2.1",
